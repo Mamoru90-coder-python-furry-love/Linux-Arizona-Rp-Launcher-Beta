@@ -1,21 +1,73 @@
-Linux Arizona RP Launcher – V0.2 Pre Release
+# Arizona RP Linux Launcher – V0.2 Pre Release
 
-Репозиторій містить скрипти для запуску Arizona RP на Linux. Доступні дві версії:
+Лаунчер для **Arizona RP** на Linux, який автоматизує запуск **SA-MP** через **Wine/Proton**, перевірку цілісності файлів та моніторинг системи.
 
-Supra Edition – максимальна функціональність, перевірка цілісності файлів, моніторинг системи, підтримка Proton GE та Wine.
+⚠️ Скрипти можуть оновлюватися у майбутньому, але автор не гарантує регулярні апдейти.
 
-Lite Edition – спрощена версія для швидкого запуску гри з мінімальною конфігурацією.
+---
 
-Скрипти автоматизують:
+## Доступні версії
 
-Завантаження та налаштування Proton GE
+### 1️⃣ Lite Edition
 
-Ініціалізацію Wine-префіксу
+* Швидкий запуск SAMP через Wine
+* Автоматичне створення Wine-префіксу
+* Пряме підключення до серверів Arizona RP
+* Мінімальні залежності
+* Консольний режим
 
-Перевірку цілісності SAMP файлів
+### 2️⃣ Supra Edition
 
-Запуск гри та моніторинг ресурсів
+* Повна автоматизація: **Proton GE + Wine-префікс + SAMP**
+* Моніторинг системи та гри (CPU, RAM, Disk)
+* Управління через FIFO: `/on`, `/off`, `/info`, `/restart`, `/update`
+* Логи, кольоровий вивід, захист від повторного запуску
+* Графічний інтерфейс через Zenity + консольний режим
 
-Репозиторій створений для користувачів Linux, які хочуть швидко запускати Arizona RP без ручного налаштування.
+---
 
-⚠️ Скрипти можуть оновлюватися у майбутньому, але автор не гарантує регулярність оновлень.
+## Установка
+
+```bash
+git clone https://github.com/Mamoru90-coder-python-furry-love/Linux-Arizona-Rp-Launcher-Beta.git
+cd Linux-Arizona-Rp-Launcher-Beta
+chmod +x "Arizona RP Linux Launcher – Lite Edition"
+chmod +x "Arizona RP Linux Launcher – Supra Edition"
+```
+
+### Запуск
+
+**Lite Edition:**
+
+```bash
+./Arizona\ RP\ Linux\ Launcher\ –\ Lite\ Edition
+```
+
+**Supra Edition (GUI через Zenity або консольний режим):**
+
+```bash
+./Arizona\ RP\ Linux\ Launcher\ –\ Supra\ Edition --debug
+```
+
+**Використання реального часу для Supra Edition через FIFO:**
+
+```bash
+echo "/info" > ~/.config/arizona_launcher/control.fifo
+echo "/restart" > ~/.config/arizona_launcher/control.fifo
+```
+
+---
+
+## Переваги
+
+* Розширення аудиторії Linux-гравців
+* Автоматичне підключення до серверів без складних налаштувань
+* Моніторинг ресурсів та цілісності файлів
+
+---
+
+## Статистика та доказ
+
+* Linux-гравці ≈ 2% від усіх Steam-гравців (\~3,5–4 млн)
+* WineHQ AppDB: GTA SA → Gold (працює, є дрібні баги)
+* Приклади ігор з Linux-підтримкою: Minecraft, CS\:GO, Dota 2, Rust
