@@ -50,5 +50,5 @@
 ```bash
 git clone https://github.com/Mamoru90-coder-python-furry-love/Linux-Arizona-Rp-Launcher-Beta.git
 cd Linux-Arizona-Rp-Launcher-Beta
-chmod +x "Arizona RP Linux Launcher – Lite Edition"
-chmod +x "Arizona RP Linux Launcher – Supra Edition"
+chmod +x "Arizona RP Linux Launcher – Lite Edition.sh"
+chmod +x "Arizona RP Linux Launcher – Supra Edition.sh"
